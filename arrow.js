@@ -22,3 +22,30 @@ console.log(result);
 console.log(result2);
 console.log(result3);
 console.log(result4);
+
+function print(callback) {
+    callback();
+}
+
+function callback(){
+    console.log('Hello');
+}
+
+callback();
+print(callback);
+
+const message = function(){
+    console.log('This message is shown after 3 seconds');
+}
+
+setTimeout(message, 3000);
+
+// Anonimous function
+setTimeout(function(){ 
+    console.log('This message is shown after 4 seconds');
+}, 4000);
+
+// ES6 arrow function
+setTimeout(() => {
+    console.log('This message is shown after 5 seconds');
+}, 5000);
